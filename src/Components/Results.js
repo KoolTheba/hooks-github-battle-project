@@ -91,7 +91,7 @@ const Results = ({location}) => {
                 dispatch({ type: 'data', players})
             })
             .catch(({message}) => {
-                dispatch({ type: 'data', message})
+                dispatch({ type: 'error', message})
             })
     }, [playerOne, playerTwo])
 
