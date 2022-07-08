@@ -179,6 +179,11 @@ li {
   flex-direction: row;
 }
 
+.inputs__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
 .player {
   flex: 1;
   margin: 0 20px;
@@ -227,6 +232,7 @@ li {
 .dark-btn {
   color: #e6e6e6;
   background: #141414;
+  border: 2px #e6e6e6 solid;
 }
 
 .dark-btn:disabled {
@@ -284,4 +290,24 @@ li {
 .light-btn:disabled {
   background-color: #292929;
   color: #4e4e4e;
+}
+
+@media screen and (max-width: 767px){
+  .inputs__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 230px;
+  }
+}
+
+@media screen and (max-width: 430px){
+  .inputs__wrapper {
+    width: 100%;
+  }
+
+  .container-sm {
+    width: 100%;
+  }
 }

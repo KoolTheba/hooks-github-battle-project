@@ -122,7 +122,7 @@ const Battle = () => {
             <Instructions />
             <div className='players-container'>
                 <h1 className='center-text header-lg'>Players</h1>
-                <div className='row space-around'>
+                <div className='inputs__wrapper'>
                     {playerOne === null 
                         ? <PlayerInput 
                             label='Player One'
