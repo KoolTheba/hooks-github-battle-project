@@ -292,6 +292,12 @@ li {
   color: #4e4e4e;
 }
 
+.languages-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (max-width: 767px){
   .inputs__wrapper {
     display: flex;
@@ -299,6 +305,16 @@ li {
     align-items: center;
     text-align: center;
     height: 230px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .languages-list {
+    flex-direction: column;
+  }
+
+  .languages-list > li {
+    margin-bottom: 0.8rem;
   }
 }
 
