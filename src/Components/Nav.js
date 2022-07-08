@@ -1,23 +1,23 @@
 import React, {useContext} from "react"
-import { ThemeConsumer } from "../contexts/theme"
+import ThemeContext from "../contexts/theme"
 import { NavLink } from 'react-router-dom'
 
 const activeStyle = {
     color: 'rgb(187, 46, 31)'
 }
 
-const Nav = () => {
-    const {theme, toggleTheme} = useContext(ThemeConsumer)
+const Nav = ({toggleTheme}) => {
+    const theme = useContext(ThemeContext)
 
     return (
         <nav className="row space-between">
             <ul className="row nav">
-               <li>
-                 <NavLink
-                    to={'/'}
-                    exact
-                    className='nav-link'
-                    activeStyle={activeStyle}
+                <li>
+                    <NavLink
+                        to={'/'}
+                        exact
+                        className='nav-link'
+                        activeStyle={activeStyle}
                     >
                     Popular
                     </NavLink>
@@ -40,7 +40,6 @@ const Nav = () => {
             {theme === 'light' ? '🔦' : '💡'}
             </button>
         </nav>
-
     )
 }
 
