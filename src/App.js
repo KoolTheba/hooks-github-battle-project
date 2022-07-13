@@ -7,13 +7,13 @@ import {
 
 import { ThemeProvider } from './contexts/theme'
 
-import Loading from './Components/Loading'
-import Nav from './Components/Nav'
+import Loading from './components/Loading'
+import Nav from './components/Nav'
 import './index.css'
 
-const Popular = React.lazy(() => import('./Components/Popular'))
-const Battle = React.lazy(() => import('./Components/Battle'))
-const Result = React.lazy(() => import('./Components/Results'))
+const Popular = React.lazy(() => import('./components/Popular'))
+const Battle = React.lazy(() => import('./components/Battle'))
+const Result = React.lazy(() => import('./components/Results'))
 
 const App = () => {
   const [theme, setTheme] = React.useState('light')
